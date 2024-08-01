@@ -1,142 +1,64 @@
-2024-08-01 22:31:11 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:31:16 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:31:27 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:31:30 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:31:43 - dao.logger - INFO - None
-2024-08-01 22:31:48 - dao.logger - INFO - None
-2024-08-01 22:31:48 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:32:29 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:32:33 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:32:44 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:32:49 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:33:04 - dao.logger - INFO - None
-2024-08-01 22:33:10 - py4j.clientserver - INFO - Error while receiving.
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: reentrant call inside <_io.BufferedReader name=508>
-2024-08-01 22:33:10 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:33:10 - root - ERROR - Exception while sending command.
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: reentrant call inside <_io.BufferedReader name=508>
+2024-08-02 02:02:51 - dao.logger - INFO - Initiating spark session...
+2024-08-02 02:02:57 - dao.logger - INFO - Loading parquet files in spark dataframes...
+2024-08-02 02:03:04 - dao.logger - INFO - Parquet files have been loaded successfully
+2024-08-02 02:03:08 - dao.logger - INFO - Exercise 1:
+2024-08-02 02:03:08 - dao.logger - INFO - We have collected a total number of 400000 applications
+2024-08-02 02:03:13 - dao.logger - INFO - Exercise 2:
+2024-08-02 02:03:13 - dao.logger - INFO - The average profit of all applications is: 140.87472103036544
+2024-08-02 02:03:14 - dao.logger - INFO - Exercise 3:
+2024-08-02 02:03:14 - dao.logger - INFO - These are the top 2 popular marketing sources:
+2024-08-02 02:03:22 - dao.logger - INFO - +-------------+------------+-------------------+
+|         Loan|Most popular|Second most popular|
++-------------+------------+-------------------+
+|   loan_1 34%|    source_4|           source_3|
+|  loan_10 99%|    source_3|           source_4|
+| loan_100 86%|    source_2|           source_1|
+|loan_1000 90%|    source_7|           source_3|
+|loan_1001 41%|    source_8|           source_9|
+|loan_1002 25%|    source_6|           source_4|
+|loan_1003 63%|    source_3|           source_5|
+|loan_1004 21%|    source_4|           source_9|
+|loan_1005 75%|    source_2|           source_3|
+|loan_1006 83%|    source_1|           source_3|
+|loan_1007 49%|    source_4|           source_6|
+|loan_1008 20%|    source_2|           source_4|
+|loan_1009 82%|    source_8|           source_2|
+| loan_101 51%|    source_6|           source_5|
+|loan_1010 31%|    source_4|           source_8|
+|loan_1011 60%|    source_3|           source_1|
+|loan_1012 50%|    source_4|           source_7|
+|loan_1013 72%|    source_3|           source_7|
+|loan_1014 80%|    source_8|           source_1|
+|loan_1015 76%|    source_6|           source_3|
++-------------+------------+-------------------+
+only showing top 20 rows
 
-During handling of the above exception, another exception occurred:
+2024-08-02 02:03:22 - dao.logger - INFO - Exercise 4:
+2024-08-02 02:03:22 - dao.logger - INFO - These are the percentage profits from each marketing source:
+2024-08-02 02:03:25 - dao.logger - INFO - +----------+--------+--------+------------------+
+|      Date|  Source|  Profit|    Daily Target %|
++----------+--------+--------+------------------+
+|2022-01-01|source_1|209591.0| 357.5113006396589|
+|2022-01-01|source_2|212927.0|1122.5590468156895|
+|2022-01-01|source_3|215349.0|306.86112456895324|
+|2022-01-01|source_4|219513.0| 453.0244556805283|
+|2022-01-01|source_5|206671.0| 575.8616846387472|
+|2022-01-01|source_6|201571.0| 321.0189358347534|
+|2022-01-01|source_7|212917.0|489.77962826647035|
+|2022-01-01|source_8|207161.0| 826.7919859514687|
+|2022-01-01|source_9|216693.0|1183.7266470009833|
+|2022-01-02|source_1|206589.0|352.39061833688703|
+|2022-01-02|source_2|212289.0|1119.1954871362295|
+|2022-01-02|source_3|224828.0| 320.3682065604605|
+|2022-01-02|source_4|208195.0|429.66670106284187|
+|2022-01-02|source_5|213342.0| 594.4495527877623|
+|2022-01-02|source_6|201902.0|321.54608144479306|
+|2022-01-02|source_7|200965.0| 462.2860691939639|
+|2022-01-02|source_8|213973.0| 853.9790868454661|
+|2022-01-02|source_9|216921.0|1184.9721402818748|
+|2022-01-03|source_1|217363.0| 370.7684434968017|
+|2022-01-03|source_2|208720.0|  1100.37958667229|
++----------+--------+--------+------------------+
+only showing top 20 rows
 
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
-    response = connection.send_command(command)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
-    raise Py4JNetworkError(
-py4j.protocol.Py4JNetworkError: Error while sending or receiving
-2024-08-01 22:33:10 - py4j.clientserver - INFO - Error while receiving.
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
-    return self._sock.recv_into(b)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\context.py", line 381, in signal_handler
-    self.cancelAllJobs()
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\context.py", line 2446, in cancelAllJobs
-    self._jsc.sc().cancelAllJobs()
-    ^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
-    return_value = get_return_value(
-                   ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
-    return f(*a, **kw)
-           ^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
-    raise Py4JError(
-py4j.protocol.Py4JError: An error occurred while calling o13.sc
-2024-08-01 22:33:10 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:33:10 - root - ERROR - Exception while sending command.
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
-    return self._sock.recv_into(b)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\context.py", line 381, in signal_handler
-    self.cancelAllJobs()
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\context.py", line 2446, in cancelAllJobs
-    self._jsc.sc().cancelAllJobs()
-    ^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
-    return_value = get_return_value(
-                   ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
-    return f(*a, **kw)
-           ^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
-    raise Py4JError(
-py4j.protocol.Py4JError: An error occurred while calling o13.sc
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
-    response = connection.send_command(command)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Andreas\PycharmProjects\pythonProject\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
-    raise Py4JNetworkError(
-py4j.protocol.Py4JNetworkError: Error while sending or receiving
-2024-08-01 22:33:10 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:33:15 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:33:21 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:33:31 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:33:34 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:33:48 - dao.logger - INFO - None
-2024-08-01 22:33:54 - dao.logger - INFO - None
-2024-08-01 22:33:54 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:34:01 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:34:06 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:34:24 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:34:28 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:34:38 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:34:42 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:34:55 - dao.logger - INFO - None
-2024-08-01 22:35:02 - dao.logger - INFO - None
-2024-08-01 22:35:02 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:36:42 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:36:48 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:36:58 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:37:02 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:37:13 - dao.logger - INFO - These are the top 2 popular marketing sources:None
-2024-08-01 22:37:18 - dao.logger - INFO - These are the percentage profits from each marketing source:None
-2024-08-01 22:37:18 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:37:51 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:37:55 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:38:04 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:38:08 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:38:16 - dao.logger - INFO - These are the top 2 popular marketing sources:None
-2024-08-01 22:38:19 - dao.logger - INFO - These are the percentage profits from each marketing source:None
-2024-08-01 22:38:19 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:39:15 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:39:22 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:39:31 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:39:35 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:39:42 - dao.logger - INFO - These are the top 2 popular marketing sources:None
-2024-08-01 22:39:45 - dao.logger - INFO - These are the percentage profits from each marketing source:None
-2024-08-01 22:39:45 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:41:02 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:41:07 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:41:15 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:41:19 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:41:26 - dao.logger - INFO - These are the top 2 popular marketing sources:None
-2024-08-01 22:41:30 - dao.logger - INFO - These are the percentage profits from each marketing source:None
-2024-08-01 22:41:30 - py4j.clientserver - INFO - Closing down clientserver connection
-2024-08-01 22:44:44 - dao.logger - INFO - Initiating spark session...
-2024-08-01 22:44:49 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-01 22:44:58 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-01 22:45:02 - dao.logger - INFO - The average profit of all applications is 46.8686675
-2024-08-01 22:45:10 - dao.logger - INFO - These are the top 2 popular marketing sources:None
-2024-08-01 22:45:13 - dao.logger - INFO - These are the percentage profits from each marketing source:None
-2024-08-01 22:45:13 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-08-02 02:03:25 - py4j.clientserver - INFO - Closing down clientserver connection
