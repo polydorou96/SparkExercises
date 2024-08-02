@@ -1,5 +1,5 @@
 from pyspark.sql import Window, DataFrame
-from pyspark.sql.functions import col, row_number, when, count, sum
+from pyspark.sql.functions import col, row_number, when, count, sum, concat, lit
 
 
 def count_number_of_applications(applications: DataFrame) -> int:
@@ -13,7 +13,7 @@ def get_average_profit(applications: DataFrame, loans: DataFrame) -> float:
     sum_of_profit = approved_applications_and_loans.select(sum('commission'))
 
     average_of_profit = sum_of_profit.collect()[0][0] / approved_applications.count()
-    return average_of_profit
+    return round(average_of_profit, 2)
 
 
 def get_popular_marketing_sources(applications: DataFrame, loans: DataFrame,
@@ -67,10 +67,11 @@ def get_profit_percentage_from_each_marketing_source(applications: DataFrame, lo
     )
 
     # Get the percentage of the daily target
-    daily_target_percentage = (daily_profit.withColumn(
-        "Daily Target %",
-        when(col("daily_target") > 0, (col("daily_profit") / col("daily_target")) * 100).otherwise(0)
-    ).drop("daily_target").orderBy("date", "source_name")
+    daily_target_percentage = (daily_profit
+                               .withColumn("Daily Target %",
+                                           when(col("daily_target") > 0,
+                                                (col("daily_profit") / col("daily_target")) * 100).otherwise(0)
+                                           ).drop("daily_target").orderBy("date", "source_name")
                                .withColumnRenamed("date", "Date")
                                .withColumnRenamed("source_name", "Source")
                                .withColumnRenamed("daily_profit", "Profit"))

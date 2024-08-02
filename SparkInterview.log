@@ -1,13 +1,13 @@
-2024-08-02 02:02:51 - dao.logger - INFO - Initiating spark session...
-2024-08-02 02:02:57 - dao.logger - INFO - Loading parquet files in spark dataframes...
-2024-08-02 02:03:04 - dao.logger - INFO - Parquet files have been loaded successfully
-2024-08-02 02:03:08 - dao.logger - INFO - Exercise 1:
-2024-08-02 02:03:08 - dao.logger - INFO - We have collected a total number of 400000 applications
-2024-08-02 02:03:13 - dao.logger - INFO - Exercise 2:
-2024-08-02 02:03:13 - dao.logger - INFO - The average profit of all applications is: 140.87472103036544
-2024-08-02 02:03:14 - dao.logger - INFO - Exercise 3:
-2024-08-02 02:03:14 - dao.logger - INFO - These are the top 2 popular marketing sources:
-2024-08-02 02:03:22 - dao.logger - INFO - +-------------+------------+-------------------+
+2024-08-02 03:10:16 - dao.logger - INFO - Initiating spark session...
+2024-08-02 03:10:23 - dao.logger - INFO - Loading parquet files in spark dataframes...
+2024-08-02 03:10:30 - dao.logger - INFO - Parquet files have been loaded successfully
+2024-08-02 03:10:33 - dao.logger - INFO - Exercise 1:
+2024-08-02 03:10:33 - dao.logger - INFO - We have received a total number of 400000 applications
+2024-08-02 03:10:38 - dao.logger - INFO - Exercise 2:
+2024-08-02 03:10:38 - dao.logger - INFO - The average profit of all applications is: £140.87
+2024-08-02 03:10:39 - dao.logger - INFO - Exercise 3:
+2024-08-02 03:10:39 - dao.logger - INFO - These are the top 2 popular marketing sources:
+2024-08-02 03:10:47 - dao.logger - INFO - +-------------+------------+-------------------+
 |         Loan|Most popular|Second most popular|
 +-------------+------------+-------------------+
 |   loan_1 34%|    source_4|           source_3|
@@ -33,9 +33,9 @@
 +-------------+------------+-------------------+
 only showing top 20 rows
 
-2024-08-02 02:03:22 - dao.logger - INFO - Exercise 4:
-2024-08-02 02:03:22 - dao.logger - INFO - These are the percentage profits from each marketing source:
-2024-08-02 02:03:25 - dao.logger - INFO - +----------+--------+--------+------------------+
+2024-08-02 03:10:47 - dao.logger - INFO - Exercise 4:
+2024-08-02 03:10:47 - dao.logger - INFO - These are the percentage profits from each marketing source:
+2024-08-02 03:10:50 - dao.logger - INFO - +----------+--------+--------+------------------+
 |      Date|  Source|  Profit|    Daily Target %|
 +----------+--------+--------+------------------+
 |2022-01-01|source_1|209591.0| 357.5113006396589|
@@ -61,4 +61,4 @@ only showing top 20 rows
 +----------+--------+--------+------------------+
 only showing top 20 rows
 
-2024-08-02 02:03:25 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-08-02 03:10:50 - py4j.clientserver - INFO - Closing down clientserver connection

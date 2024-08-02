@@ -12,28 +12,28 @@ def main():
     spark = initiate_spark_session(app_name='LoanApplicationsAnalysis')
 
     logger.info("Loading parquet files in spark dataframes...")
-    loan_df = read_parquet_file_into_spark_df(spark_session=spark,
-                                              root_directory=Path("input/spark-interview/loans_parquet"))
-    application_df = read_parquet_file_into_spark_df(spark_session=spark,
-                                                     root_directory=Path("input/spark-interview/applications_parquet"))
-    marketing_source_df = read_parquet_file_into_spark_df(spark_session=spark,
-                                                          root_directory=Path("input/spark-interview/sources_parquet"))
+    loans = read_parquet_file_into_spark_df(spark_session=spark,
+                                            root_directory=Path("input/spark-interview/loans_parquet"))
+    applications = read_parquet_file_into_spark_df(spark_session=spark,
+                                                   root_directory=Path("input/spark-interview/applications_parquet"))
+    marketing_sources = read_parquet_file_into_spark_df(spark_session=spark,
+                                                        root_directory=Path("input/spark-interview/sources_parquet"))
     logger.info("Parquet files have been loaded successfully")
 
-    number_of_applications = count_number_of_applications(applications=application_df)
+    number_of_applications = count_number_of_applications(applications=applications)
     logger.info("Exercise 1:")
-    logger.info(f"We have collected a total number of {number_of_applications} applications")
-    average_profit = get_average_profit(applications=application_df, loans=loan_df)
+    logger.info(f"We have received a total number of {number_of_applications} applications")
+    average_profit = get_average_profit(applications=applications, loans=loans)
     logger.info("Exercise 2:")
-    logger.info(f"The average profit of all applications is: {average_profit}")
-    top_two_marketing_sources = get_popular_marketing_sources(applications=application_df, loans=loan_df,
-                                                              marketing_sources=marketing_source_df)
+    logger.info(f"The average profit of all applications is: £{average_profit}")
+    top_two_marketing_sources = get_popular_marketing_sources(applications=applications, loans=loans,
+                                                              marketing_sources=marketing_sources)
     logger.info("Exercise 3:")
     logger.info("These are the top 2 popular marketing sources:")
     logger.info(f"{get_show_string(df=top_two_marketing_sources)}")
-    profit_percentage = get_profit_percentage_from_each_marketing_source(applications=application_df,
-                                                                         loans=loan_df,
-                                                                         marketing_sources=marketing_source_df)
+    profit_percentage = get_profit_percentage_from_each_marketing_source(applications=applications,
+                                                                         loans=loans,
+                                                                         marketing_sources=marketing_sources)
     logger.info("Exercise 4:")
     logger.info("These are the percentage profits from each marketing source:")
     logger.info(f"{get_show_string(df=profit_percentage)}")
